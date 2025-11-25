@@ -1,0 +1,49 @@
+/* styles.css - Eco Local */
+:root{
+  --bg:#f6fcf6;
+  --card:#ffffff;
+  --accent:#2d8f5b;
+  --muted:#6b7280;
+  --glass: rgba(255,255,255,0.6);
+  --radius:14px;
+  --font-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
+}
+
+*{box-sizing:border-box}
+body{font-family:var(--font-sans);margin:0;background:var(--bg);color:#073b2d;line-height:1.5}
+.container{max-width:1000px;margin:0 auto;padding:1.25rem}
+
+.site-header{background:linear-gradient(90deg, rgba(45,143,91,0.12), rgba(45,143,91,0.06));backdrop-filter: blur(6px);position:sticky;top:0;z-index:20}
+.site-header .container{display:flex;align-items:center;gap:1rem}
+.logo{font-weight:600;margin:0;padding:.75rem 0}
+#nav-toggle{margin-left:auto;background:none;border:0;font-size:1.25rem;display:none}
+#main-nav a{margin-left:1rem;text-decoration:none;color:var(--accent);font-weight:600}
+.hero{padding:3rem 0;text-align:center;background-image:linear-gradient(180deg, rgba(45,143,91,0.06), rgba(45,143,91,0.02));border-bottom:1px solid rgba(10,10,10,0.02)}
+.lead{font-family:var(--font-serif);font-size:1.125rem;color:var(--muted)}
+
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:0;cursor:pointer}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+
+.section{padding:2rem 0}
+.cards{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+.card{flex:1 1 240px;background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+
+.filters{margin:1rem 0}
+.filter{border:1px dashed rgba(10,10,10,0.06);padding:.4rem .6rem;border-radius:8px;margin-right:.5rem;cursor:pointer;background:white}
+.filter.active{background:var(--accent);color:white;border:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.tile{background:var(--card);border-radius:10px;overflow:hidden;box-shadow:0 8px 28px rgba(10,10,10,0.06);position:relative}
+.tile img{display:block;width:100%;height:160px;object-fit:cover}
+.tile-caption{padding:.6rem;font-weight:600}
+
+.site-footer{padding:1rem 0;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* Responsive */
+@media (max-width:800px){
+  #nav-toggle{display:block}
+  #main-nav{position:absolute;right:10px;top:56px;background:white;padding:.75rem;border-radius:10px;display:none;box-shadow:0 10px 24px rgba(0,0,0,0.08)}
+  #main-nav.nav-open{display:block}
+  #main-nav a{display:block;margin:.5rem 0}
+}
