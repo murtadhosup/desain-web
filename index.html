@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Eco Local — Panduan Lingkungan Ramah</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Merriweather:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="logo">Eco Local</h1>
+        <button id="nav-toggle" aria-label="toggle navigation">☰</button>
+        <nav id="main-nav" class="nav-closed">
+          <a href="#home">Beranda</a>
+          <a href="#guide">Panduan</a>
+          <a href="#gallery">Galeri</a>
+          <a href="#about">Tentang</a>
+          <a href="#contact">Kontak</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container">
+          <h2>Selamat datang di Eco Local</h2>
+          <p class="lead">
+            Panduan dan inspirasi kecil untuk membuat lingkungan lokalmu lebih
+            ramah & hijau.
+          </p>
+          <div class="cta-row">
+            <a href="#guide" class="btn">Mulai</a>
+            <button id="color-toggle" class="btn alt">Ganti Tema Warna</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="guide" class="container section">
+        <h3>Panduan Singkat</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Kurangi Sampah</h4>
+            <p>
+              Praktikkan reduce, reuse, recycle — bawa botol minum dan tas
+              belanja.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Tanam Pohon</h4>
+            <p>
+              Mulai dari pot di rumah atau berpartisipasi di kegiatan tanam
+              pohon setempat.
+            </p>
+          </article>
+          <article class="card">
+            <h4>Transportasi Hijau</h4>
+            <p>Gunakan sepeda atau angkutan umum ketika memungkinkan.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="container section">
+        <h3>Galeri Inisiatif Lokal</h3>
+        <div class="filters">
+          <button class="filter active" data-filter="all">Semua</button>
+          <button class="filter" data-filter="plants">Tanaman</button>
+          <button class="filter" data-filter="cleanup">Bersih-bersih</button>
+        </div>
+        <div class="grid" id="gallery-grid">
+          <div class="tile" data-type="plants">
+            <img src="https://picsum.photos/seed/eco1/600/400" alt="plants" />
+            <div class="tile-caption">Kebun Komunitas</div>
+          </div>
+          <div class="tile" data-type="cleanup">
+            <img src="https://picsum.photos/seed/eco2/600/400" alt="cleanup" />
+            <div class="tile-caption">Aksi Bersih Pantai</div>
+          </div>
+          <div class="tile" data-type="plants">
+            <img src="https://picsum.photos/seed/eco3/600/400" alt="plants" />
+            <div class="tile-caption">Vertical Garden</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="container section">
+        <h3>Tentang Proyek</h3>
+        <p>
+          Website ini dibuat sebagai contoh tugas: menggunakan HTML, CSS, dan
+          Javascript (dengan jQuery) untuk menghadirkan halaman yang responsif
+          dan interaktif.
+        </p>
+        <details>
+          <summary>Fitur teknis</summary>
+          <ul>
+            <li>Responsive layout</li>
+            <li>jQuery untuk DOM & animasi sederhana</li>
+            <li>Tema warna dapat diswitch</li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="kontak">
+        <h2>Kontak & Kontribusi</h2>
+
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div class="form-group full">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-kirim">Kirim</button>
+
+          <p id="notif" style="display: none; margin-top: 10px">
+            Terima kasih, pesanmu telah diterima!
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© tugas Desain Web - Rafli Murtadho</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
